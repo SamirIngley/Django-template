@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('', include('polls.urls')),
     path('polls/', include('polls.urls')), #will look for the first one that matches
-    path('wiki/', include('wiki.urls')),
     path('admin/', admin.site.urls),
+    path('journal/', include(journal)),
 ]
+    
